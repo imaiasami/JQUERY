@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            not() : 선택자에 해당하지 않는 태그들을 선택
+        */
+        $(function () {
+            $("p:not(.test1)").css("background-color", "pink")
+        });
+    </script>
+</head>
+
+<body>
+    <p>p 태그</p>
+    <div>div 태그</div>
+    <p class="test1">p 태그 test1 클래스</p>
+    <p class="test2">p 태그 test2 클래스</p>
+
+</body>
+
+</html>

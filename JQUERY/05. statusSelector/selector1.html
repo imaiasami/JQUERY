@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+
+        /*
+            상태 선택자 : 태그의 상태에 따라 선택하는 선택자 : header : h1 ~ h6 태그를 선택
+
+        */
+        $(function () {
+            $(":header").css("color", "red")
+        });
+    </script>
+</head>
+
+<body>
+    <p>p 태그</p>
+    <h1>h1 태그</h1>
+    <h6>h6 태그</h6>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            on : 이벤트를 설정하는 함수
+            off : 설정된 이벤트를 제거하는 함수
+            one : 이벤트를 설정하고 이벤트가 발생되었을 때 자동으로 제거
+        */
+        $(function () {
+            $("#test1").on("click", function () {
+                alert('test1');
+            });
+            $("#test2").one("click", function () {
+                alert('test2');
+            });
+
+            $("#test3").on({
+                click: function () {
+                    alert('test3');
+                },
+                mouseenter: function () {
+                    $("#test3").css("background-color", "black");
+                    $("#test3").css("color", "white");
+                },
+                mouseleave: function () {
+                    $("#test3").css("background-color", "white");
+                    $("#test3").css("color", "black");
+                }
+            });
+
+        });
+
+        function remove_event() {
+            $("#test1").off("click");
+        }
+    </script>
+
+</head>
+
+<body>
+    <h3 id="test1">on</h3>
+    <input type="button" value="이벤트 제거" onclick="remove_event()">
+    <h3 id="test2">one</h3>
+
+    <h3 id="test3">event</h3>
+</body>
+
+</html>

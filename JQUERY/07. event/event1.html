@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            click : 클릭
+            dblclick : 더블클릭
+            mouseenter : 마우스 커서가 들어왔을 때
+            mouseleave :  마우스 커서가 나갔을 때
+            mousedown : 마우스 클릭 했을 때
+            mouseup : 마우스를 클릭하고 있을 때
+            hover : 마우스 커서가 들어왔을 때와 나갔을 때
+            focus : 포커스를 받았을 때
+            blur : 포커스를 잃었을 때
+            */
+        $(function () {
+            $("#test1").click(function () {
+                $("#test1").css("background-color", "black");
+                $("#test1").css("color", "white");
+            });
+        });
+
+        $(function () {
+            $("#test2").dblclick(function () {
+                $("#test2").css("background-color", "black");
+                $("#test2").css("color", "white");
+            });
+        });
+
+        $(function () {
+            $("#test3").mouseenter(function () {
+                $("#test3").css("background-color", "black");
+                $("#test3").css("color", "white");
+            });
+        });
+
+        $(function () {
+            $("#test3").mouseleave(function () {
+                $("#test3").css("background-color", "white");
+                $("#test3").css("color", "black");
+            });
+        });
+        $(function () {
+            $("#test4").mousedown(function () {
+                $("#test4").css("background-color", "black");
+                $("#test4").css("color", "white");
+            });
+        });
+        $(function () {
+            $("#test4").mouseup(function () {
+                $("#test4").css("background-color", "white");
+                $("#test4").css("color", "black");
+            });
+        });
+        $(function () {
+            $("#test5").hover(function () {
+                $("#test5").css("background-color", "black");
+                $("#test5").css("color", "white");
+            }, function () {
+                $("#test5").css("background-color", "white");
+                $("#test5").css("color", "black");
+            });
+        });
+        $(function () {
+            $("#test6").focus(function () {
+                $("#test6").css("background-color", "blue");
+            });
+        });
+        $(function () {
+            $("#test6").blur(function () {
+                $("#test6").css("background-color", "pink");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h3 id="test1">click</h3>
+    <h3 id="test2">double click</h3>
+    <h3 id="test3">mouse enter/leave</h3>
+    <h3 id="test4">mouse down/up</h3>
+    <h3 id="test5">hover</h3>
+    <input type="text" id="test6">
+
+</body>
+
+</html>

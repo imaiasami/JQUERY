@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+
+        /*
+            parent : 선택된 태그의 부모 태그를 선택한다
+            parents : 선택된 태그의 모든 부모 태그를 선택한다.
+            parents(선택자2) : 선택된 태그의 모든 부모 태그 중 선택자2에 해당하는 태그들이 선택된다.
+            parentsUntil(선택자2) : 선택한 태그에서 선택자2 태그 전까지의 모든 부모 태그들이 선택된다.
+        */
+        $(function () {
+            $("#test3").parent().css("border-color", "red")
+            $("#test3").parents().css("border-width","4px")
+            $("#test3").parents(".test1").css("border-style", "dotted")
+            $("#test3").parentsUntil(".test1").css("border-style", "dashed")
+        });
+    </script>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        div 태그 1
+        <div class="test1">
+            div 태그 2
+            <div class="test2">
+                div 태그 3
+                <div id="test3">
+                    div 태그 4
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

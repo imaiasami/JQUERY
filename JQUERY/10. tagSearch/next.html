@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+
+        /*
+            next : 선택된 태그 다음 태그가 선택
+            nextAll : 선택된 태그 다음 태그들이 모두 선택
+            nextUntil(선택자2) : 선택된 태그 다음 태그들 중 선택자2 까지의 모든 태그들이 선택
+        */
+        $(function () {
+            $("#test1").next().css("border-color", "red");
+            $("#test1").nextAll().css("border-style", "dotted");
+            $("#test1").nextUntil("#test2").css("border-width", "4px");
+        })
+    </script>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>div 1</div>
+    <div id="test1">div 2</div>
+    <div>div 3</div>
+    <div>div 4</div>
+    <div id="test2">div 5</div>
+
+</body>
+
+</html>

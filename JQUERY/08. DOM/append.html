@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            append : html 코드나 태그를 태그 내부의 뒤에 추가한다.
+            prepend : html 코드나 태그를 태그 내부의 앞에 추가한다.
+        */
+       let count = 1;
+        function append1() {
+            $("#test1").append("<p>새롭게 추가한 append p 태그</p>");
+            count++ + "</p>"
+        }
+        function prepend1() {
+            $("#test1").prepend("<p>새롭게 추가한 prepend p 태그</p>");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="test1">
+        <p>p 태그</p>
+    </div>
+    <input type="button" value="HTML 코드를 뒤에 추가" onclick="append1()">
+    <input type="button" value="HTML 코드를 앞에 추가" onclick="prepend1()">
+
+
+</body>
+
+</html>

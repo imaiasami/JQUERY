@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+
+            :odd: 인덱스 번호(0부터 시작)가 홀수인 태그를 선택
+            :even : 인덱스 번호(0부터 시작)가 짝수인 태그를 선택
+        */
+
+        $(function () {
+            $("p:odd").css("background-color", "pink");
+            $("p:even").css("color", "blue");
+        });
+
+    </script>
+</head>
+
+<body>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+
+</body>
+
+</html>

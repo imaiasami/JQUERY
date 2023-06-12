@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+
+        /*
+            : has(선택자) : 지정된 선택자를 포함하고 있는 태그를 선택
+        */
+        $(function () {
+            $("div:has(p)").css("background-color", "skyblue")
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>p 태그를 가지고 있는 div 태그</p>
+    </div>
+    <div>
+        <div>p 태그를 가지고 있는 div 태그</div>
+    </div>
+</body>
+
+</html>

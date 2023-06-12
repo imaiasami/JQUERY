@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            children : 선택한 태그의 자식 태그들을 선택
+            children(선택자2) : 선택한 태그의 자식 태그들 중 선택자2에 해당하는 태그들이 선택
+            find(선택자2) : 선택된 태그의 하위 태그들 중 선택자2에 해당하는 태그들이 선택
+        */
+        $(function () {
+            $("#test1").children().css("border-color", "red")
+            $("#test1").children(".test2").css("border-width", "4px")
+            $("#test1").find(".test4").css("border-style", "dotted")
+        });
+
+    </script>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test1">
+        div 태그
+        <div class="test2">
+            div 1
+            <div class="test4">
+                div 1-2
+            </div>
+        </div>
+        <div class="test3">
+            div 2
+            <div>
+                div 2-2
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

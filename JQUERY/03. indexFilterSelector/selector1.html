@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            인덱스 번째 태그 선택하기
+            :eq(인덱스) : 인덱스(0부터 시작)번째 해당하는 태그를 선택
+            :nth-child(인덱스) : 각 영역의 인덱스(1부터 시작)번째 해당하는 태그를 선택한다.
+            인덱스 번째 태그가 선택자에 해당하지 않으면 선택되지 않는다.
+            :nth-of-type(인덱스) : 각 영역의 인덱스(1부터 시작)번째 해당하는 태그를 선택한다.
+        */
+       $(function(){
+            $("p:eq(2)").css("background-color","pink")
+            $("p:nth-child(1)").css("color","blue")
+            $("nth-of-type(1)").css("font-size","30px")
+       });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>p 태그</p>
+        <p>p 태그</p>
+        <p>p 태그</p>
+    </div>
+    <hr>
+    <div>
+        <p>p 태그</p>
+        <p>p 태그</p>
+        <p>p 태그</p>
+    </div>
+    <hr>
+    <div>
+        <div>div 태그</div>
+        <p>p 태그</p>
+        <p>p 태그</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            remove : 선택한 태그를 제거한다.
+            empty : 선택한 태그 내의 모든 태그를 제거한다.
+        */
+        function remove_test2() {
+            $("#test2").remove();
+        }
+        function empty_test1() {
+            $("#test1").empty();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="test1">
+        <p>p 태그</p>
+        <p id="test2">id가 test2인 p 태그</p>
+        <p>p 태그</p>
+    </div>
+    <input type="button" value="test2 제거하기" onclick="remove_test2()">
+    <input type="button" value="test1 내부의 모든 태그 제거하기" onclick="empty_test1()">
+
+</body>
+
+</html>

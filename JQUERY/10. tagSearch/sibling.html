@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            siblings : 선택된 태그와 같은 계층의 모든 태그들이 선택된다.
+            siblings(선택자2) : 선택된 태그와 같은 계층의 모든 태그 중 선택자2에 해당하는 태그들이 선택된다.
+        */
+        $(function () {
+            $("#test1").siblings().css("border-color", "red");
+            $("#test1").siblings(".test2").css("border-style", "dotted");
+        });
+    </script>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test1">div 1</div>
+    <div class="test2">div 2</div>
+    <div id="test1">div 3</div>
+    <div class="test2">div 4</div>
+    <div class="test1">div 5</div>
+</body>
+
+</html>

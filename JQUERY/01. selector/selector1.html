@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            기본 선택자
+            - 전체 선택자("*") : HTML의 모든 태그를 선택한다.
+            - 태그이름 선택자("태그이름") : 지정한 태그 이름에 해당하는 태그를 선택한다.
+            - 아이디 선택자("#아이디") : id 속성의 값이 일치하는 태그를 선택한다. 
+            - 클래스 선택자(".클래스") : class 속성의 값이 일치하는 태그를 선택한다.
+
+        */
+
+        $(function () {
+            $("*").css("color", "red")
+
+            $("p").css("background-color", "green")
+
+            $("#test1").css("color", "yellow")
+
+            $(".test3").css("color", "orange")
+
+        });
+    </script>
+</head>
+
+<body>
+    <p id="test1">문자열1</p>
+    <p class="test3">문자열2</p>
+    <div id="test2">문자열3</div>
+    <div class="test3">문자열4</div>
+</body>
+
+</html>

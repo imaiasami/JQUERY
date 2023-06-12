@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+
+        /*
+            : enabled : 활성 상태인 input 태그를 선택
+            : disabled : 비활성 상태인 input 태그를 선택
+            : selected : select 태그 내의 option 태그 중 현재 선택되어 있는 태그를 선택
+            : checked : checkbox 혹은 radio 에서 현재 check 되어 있는 태그를 선택
+        */
+        $(function () {
+            $(":enabled").css("background-color", "pink")
+            $(":disabled").css("background-color", "skyblue")
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text">활성 상태<br>
+    <input type="password">활성 상태<br>
+    <input type="text" disabled>비활성 상태<br>
+    <input type="password" disabled>비활성 상태<br>
+</body>
+
+</html>

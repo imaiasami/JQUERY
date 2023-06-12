@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+            after : html 코드나 태그를 태그 다음에 배치된다.
+            before : html 코드나 태그를 태그 앞에 배치한다.
+        */
+        let count = 1;
+        function after1() {
+            $("#test1").after("<p>새롭게 추가한 p 태그" + count++ + "</p>")
+        }
+        function before1() {
+            $("#test1").before("<p>새롭게 추가한 p 태그" + count++ + "</p>")
+        }
+    </script>
+</head>
+
+<body>
+    <div id="test1">
+        <p>p 태그</p>
+    </div>
+    <input type="button" value="html 코드를 뒤에 추가" onclick="after1()">
+    <input type="button" value="html 코드를 앞에 추가" onclick="before1()">
+
+</body>
+
+</html>

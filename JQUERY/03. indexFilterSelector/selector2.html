@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        /*
+
+            :gt(인덱스) : 선택자에 해당하는 태그 중 인덱스(0부터 시작)번째 태그 이후의 태그들이 선택
+            :lt(인덱스) : 선택자에 해당하는 태그 중 인덱스(0부터 시작)번째 태그 이전의 태그들이 선택
+            :nth-last-child(인덱스) : 뒤에서 인덱스(1부터 시작)번째 태그가 선택된다.
+            인텍스 번째 태그가 선택자와 다르면  선택되지 않는다.
+            : nth-last-of-type(인덱스) : 뒤에서 인덱스(1부터 시작)번째 태그가 시작된다.
+        */
+        $(function () {
+            $("p:gt(0)").css("background-color", "pink")
+            $("p:lt(7)").css("color", "red")
+            $("p:nth-last-child(1)").css("font-size", "30px")
+            $("p:nth-last-of-type(1)").css("font-style", "italic")
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>p 태그</p>
+        <p>p 태그</p>
+        <p>p 태그</p>
+    </div>
+    <hr>
+    <div>
+        <p>p 태그</p>
+        <p>p 태그</p>
+        <p>p 태그</p>
+    </div>
+    <hr>
+    <div>
+        <p>p 태그</p>
+        <p>p 태그</p>
+        <div>div 태그</div>
+    </div>
+</body>
+
+</html>

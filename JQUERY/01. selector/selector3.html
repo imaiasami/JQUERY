@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+
+        // 하위 태그 선택 : 태그 내부의 모든 태그들을 선택
+        // 선택자1 선택자2
+        $(function () {
+            $("#test1 h1").css("background-color", "pink")
+        });
+    </script>
+</head>
+
+<body>
+    <div id="test1">
+        <h1>자식 태그 h1</h1>
+        <div>
+            <h1>자손 태그 h1</h1>
+        </div>
+    </div>
+</body>
+
+</html>
